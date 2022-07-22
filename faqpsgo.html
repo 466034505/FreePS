@@ -48,6 +48,8 @@
 		<div style="width:800px;margin:50px auto;">
 		<p style="font-size:20px;font-weight:bold;color:#CFB53B;">特别说明：由于7.22日刚刚上线，可能难免会碰到一些小bug或者浏览器兼容问题，另外我和朋友都没有4和7系统无法测试。描述问题发送邮件至psgo.tk@outlook.com</p>
         <br>
+		<p style="font-size:20px;font-weight:bold;color:#CFB53B;">上线后集中反馈问题比较多的一个是6.72 Phive缓存失败问题，经过排查应该是原cache逻辑页面上传服务器不完整，另外CDN缓存有延迟，这个还需要再观察一下；另一个是反馈ESP8266刷机速度特别慢，ESP32个别固件报错和刷机网页加载慢的问题，由于页面需要加载整个刷机的js库，而且在厂商服务器上，受到一定的局限性，关于bug已经在和厂商的开发者沟通，后面计划换解决方案。</p>
+        <br>
 		<p style="font-size:20px;font-weight:bold;color:#CFB53B;">Q：折腾的时候为什么会有死机断电花屏重启等情况出现？</p>
 		<p style="font-size:20px;color:white;">A：这个涉及到折腾的原理，首先通过webkit浏览器漏洞拿到低权限，然后通过直接操作内存攻击内核漏洞，这种方式有一定概率会导致系统内核崩溃，从而出现死机断电花屏重启等现象，这和早期的PSP图片折腾类似，与Switch这种通过IC绕过校验的方式来比稳定性要略差；另外也和作者代码实现方式和有无bug也有关系。</p>
         <br>
