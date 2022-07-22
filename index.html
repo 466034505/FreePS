@@ -1,154 +1,222 @@
-<html>
-<head>
-<meta charset="utf-8"> 
-<link rel="shortcut icon" href="psgo.ico" type="image/x-icon" />
-<title>PSGO.TK - 小改版新出发</title>
-<style>
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <head> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="https://www.psgo.tk/psgo.ico" type="image/x-icon">
+  <title>PSGO折腾导航 - 小改版新出发</title> 
+  <style>
+    
+	body{
+	overflow: hidden;
+    background-color:#080808;
+    background-attachment:fixed;
+    background-size:100%;
+	background-repeat:no-repeat;
+    font-family:system-ui;
+	text-align:center
+    }
+    
+	a:hover{
+	text-decoration: none;
+    border-bottom: 1.5px solid;
+	padding-bottom: 18px;
+	}
+    
+	button:-moz-focus-inner, button:focus{
+    outline:0;
+    border:none
+	}
+	
+	option{
+    background-color:#080808;
+    }
+	
+    button{
+    font-family:arial;
+    font-size:22px;
+    font-weight:700;
+    border:2px solid #404040;
+    border-radius:4px;
+	margin:10px 2px; 
+    padding:10px;
+    cursor:pointer;
+    display:inline-block;
+    text-decoration:none;
+    background:#CFB53B;
+    box-shadow:0 5px 0 #888888;
+    } 
 
-body {
-  margin:0;
-}
+    button:hover{
+    color: #CFB53B;
+    font-size:22px;
+    background:#161616;
+    border:2px solid #fff;
+    box-shadow:0 5px 0 #ccc;
+    } 
+    
+    button:active{
+    background:#CFB53B;
+    position:relative;
+    color:#000;
+    top:5px;
+    box-shadow:none
+    }
+    
+   .bottopmsg{
+	position:absolute;
+	bottom:20px;
+    width:99%;
+	padding:5px 0 1px 0;
+	color:#CFB53B;
+	text-align: center;
+	font-size:16px;
+    }
+	
+      /** variables */
+      :root {
+        /*orig*/
 
-h1 {
-  font-family:sans-serif;
-  font-weight:500;
-  letter-spacing: 2px;
-  font-size:48px;
-}
+        --color-black: black;
+        --color-cod-gray: #101010;
+        --color-white: white;
+        --color-error: rgb(191, 95, 95);
+        --color-primary-rgba: 0, 192, 251;
+        --color-primary: #00c0fb;
+        --color-secondary-rgba: 234, 182, 56;
+        --color-secondary: #eab638;
+      }
 
-p {
-  font-family:sans-serif;
-  letter-spacing: 1px;
-  font-size:18px;
-  color: #333333;
-}
+      .tiles {
+        display: flex;
+        flex-direction: column;
+		z-index:-1;
+        justify-content: center;
+        left: 50%;
+        position: fixed;
+        top: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%) rotate(22.5deg);
+      }
+      .tiles__line {
+        -webkit-animation: runner 20s linear infinite;
+        display: flex;
+        transform: translateX(25%);
+      }
+      .tiles__line:nth-child(2) {
+        -webkit-animation-duration: 32s;
+      }
+      .tiles__line:nth-child(3) {
+        -webkit-animation-duration: 44s;
+      }
 
-.header {
-  position:relative;
-  text-align:center;
-  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
-  color:white;
-}
-.logo {
-  width:50px;
-  fill:white;
-  padding-right:15px;
-  display:inline-block;
-  vertical-align: middle;
-}
+      @keyframes runner {
+        to {
+          -webkit-transform: translateX(-25%);
+        }
+      }
+      .tiles__line-img {
+        --tile-margin: 3vw;
+        background-position: 50% 50%;
+        background-size: cover;
+        border-radius: 50%;
+        flex: none;
+        height: 30vh;
+        margin: var(--tile-margin);
+        width: 30vh;
+        background-color:#CFB53B;
+        opacity: 0.3;
 
-.inner-header {
-  height:65vh;
-  width:100%;
-  margin: 0;
-  padding: 0;
-}
+      }
+      .tiles__line-img--large {
+        border-radius: 20vh;
+        width: 100vh;
+        opacity: 0.3;
+      }
+  
+</style> 
+ </head> 
+ <body> 
+  <br> 
+  <h1 style="font-size:60px;text-align:center;font-style:italic;"><font color="#CFB53B">PSGO.TK  折腾导航</font></h1> 
+  <div id="mymenu"> 
+  <div id="progress" style="font-size:30px;text-align:center;color:#fff;font-style:italic;font-weight:bold;">小改版 <font color="#CFB53B"> 新出发</font></div> 
+  <br> 
+  <table align="center"> 
+<tr><td align="center">
+<button type="button" onmouseover="progress.innerHTML='PSGO 原版镜像'"; onmouseout="progress.innerHTML='小改版 新出发'"; onclick="window.location.href='psgo/474/index.html'";><font color="">  4.74 v1.4 </font></button>
+<button type="button" onmouseover="progress.innerHTML='PSGO 原版镜像'"; onmouseout="progress.innerHTML='小改版 新出发'"; onclick="window.location.href='psgo/505/index.html'";><font color=""> 5.05 v3 </font></button>
+<button type="button" onmouseover="progress.innerHTML='PSGO 原版镜像'"; onmouseout="progress.innerHTML='小改版 新出发'"; onclick="window.location.href='psgo/672V10/index.html'";><font color=""> 6.72 v10 </font></button>
+<button type="button" onmouseover="progress.innerHTML='PSGO 原版镜像'"; onmouseout="progress.innerHTML='小改版 新出发'"; onclick="window.location.href='psgo/672/index.html'";><font color=""> 6.72 Phive </font></button>
+<button type="button" onmouseover="progress.innerHTML='PSGO 原版镜像 / 7.X建议升级9.00'"; onmouseout="progress.innerHTML='小改版 新出发'"; onclick="window.location.href='psgo/702P/index.html'";><font color=""> 7.02 </font></button>
+<button type="button" onmouseover="progress.innerHTML='PSGO 原版镜像 / 7.X建议升级9.00'"; onmouseout="progress.innerHTML='小改版 新出发'"; onclick="window.location.href='psgo/755P/index.html'";><font color=""> 7.5X </font></button>
+<button type="button" onmouseover="progress.innerHTML='7.16新增 GoldHEN V2.3b2'"; onmouseout="progress.innerHTML='小改版 新出发'" onclick="window.location.href='psgo/9v10/index.html'";><font color=""> 9.00 v10 </font></button>
+</td></tr>
 
-.flex { /*Flexbox for containers*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+<tr><td align="center" >
+<button type="button" onmouseover="progress.innerHTML='国内镜像 / 支持505 & 672 & 702 & 75X & 900 / 版本最全 / 用户量最多'"; onmouseout="progress.innerHTML='小改版 新出发'"; onclick="window.location.href='https://karo.psgo.tk'";><font color=""> Karo </font></button>
+<button type="button" onmouseover="progress.innerHTML='国内镜像 / 支持672 & 702 & 75X & 900'"; onmouseout="progress.innerHTML='小改版 新出发'"; onclick="window.location.href='https://gamerhack.psgo.tk'";><font color=""> GamerHack </font></button>
+<button type="button" onmouseover="progress.innerHTML='国内镜像 / 支持505 & 672 & 702 & 900'"; onmouseout="progress.innerHTML='小改版 新出发'"; onclick="window.location.href='https://wolf.psgo.tk'";><font color=""> TheWolf </font></button>
+<button type="button" onmouseover="progress.innerHTML='国内镜像 / 支持505 & 507 & 672 & 900 / 移植Leeful方案 / 无插件'"; onmouseout="progress.innerHTML='小改版 新出发'"; onclick="window.location.href='prb/index.html'";><font color=""> Prb 极简 </font></button>
+<button type="button" onmouseover="progress.innerHTML='国内镜像 / 支持505 & 507 & 672 & 900 / GoldHEN v2.3b2 / 无插件'"; onmouseout="progress.innerHTML='小改版 新出发'"; onclick="window.location.href='prb2.3b2/index.html'";><font color=""> GoldHEN v2.3 尝鲜 </font></button>
+<button type="button" onmouseover="progress.innerHTML='国内镜像 / 支持672 & 702 & 75X & 900'"; onmouseout="progress.innerHTML='小改版 新出发'"; onclick="window.location.href='https://dm.psgo.tk'";><font color=""> DM </font></button>
+<button type="button" onmouseover="progress.innerHTML='国内镜像 / 支持505 & 672'"; onmouseout="progress.innerHTML='小改版 新出发'"; onclick="window.location.href='wr0zen/index.html'";><font color=""> wr0zen </font></button>
+</td></tr>
 
-.waves {
-  position:relative;
-  width: 100%;
-  height:15vh;
-  margin-bottom:-7px; /*Fix for safari gap*/
-  min-height:100px;
-  max-height:150px;
-}
+<tr><td align="center">
+<button type="button" onmouseover="progress.innerHTML='国内镜像 / 由Kameleon移植编译 / 不含插件 / 稳定性不错'"; onmouseout="progress.innerHTML='小改版 新出发'"; onclick="window.location.href='leeful900/index.html'"><font color=""> Leeful 9.00 稳定 </font></button>
+<button type="button" onmouseover="progress.innerHTML='国内镜像 / 更新快 / 善于移植优质方案'"; onmouseout="progress.innerHTML='小改版 新出发'"; onclick="window.location.href='kameleon/index.html'"><font color=""> Kameleon 9.00 </font></button>
+<button type="button" onmouseover="progress.innerHTML='国内镜像 / 经典方案 / 新增GoldHEN V2.2.2'"; onmouseout="progress.innerHTML='小改版 新出发'"; onclick="window.location.href='macedo900full/index.html'"><font color=""> Macedo 9.00 </font></button>
+<button type="button" onmouseover="progress.innerHTML='国内镜像 / 由Kameleon移植编译 / 不含插件 / 单文件新技术'"; onmouseout="progress.innerHTML='小改版 新出发'"; onclick="window.location.href='stooged900/index.html'"><font color=""> Stooged 9.00 </font></button>
+<button type="button" onmouseover="progress.innerHTML='常用工具 / 不定期更新'"; onmouseout="progress.innerHTML='小改版 新出发'"; onclick="window.open('https://pan.baidu.com/s/1YujeyrT26tYzFxJJpSFMcA?pwd=hmhy')";><font color=""> 工具包 </font></button>
+</td></tr>
 
-.content {
-  position:relative;
-  height:20vh;
-  text-align:center;
-  background-color: white;
-}
+<tr><td align="center">
+<button type="button"  onmouseover="progress.innerHTML='集合众多作者原版原链接地址 / 更新更及时 '"; onmouseout="progress.innerHTML='小改版 新出发'"; onclick="window.location.href='https://aio.psgo.tk'"; style="width:360px;"><font color=""> All in One 原版原链接折腾导航 </font> </button>
+<button type="button"  onmouseover="progress.innerHTML='集合众多固件 / 支持Windows和macOS系统 / 兼容多种开发板'"; onmouseout="progress.innerHTML='小改版 新出发'"; onclick="window.open('https://esp.psgo.tk')"; style="width:360px;"><font color=""> ESP8266 / ESP32 在线刷机工具 </font> </button>
 
-/* Animation */
-
-.parallax > use {
-  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
-}
-.parallax > use:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 7s;
-}
-.parallax > use:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 10s;
-}
-.parallax > use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 13s;
-}
-.parallax > use:nth-child(4) {
-  animation-delay: -5s;
-  animation-duration: 20s;
-}
-@keyframes move-forever {
-  0% {
-   transform: translate3d(-90px,0,0);
-  }
-  100% { 
-    transform: translate3d(85px,0,0);
-  }
-}
-/*Shrinking for mobile*/
-@media (max-width: 768px) {
-  .waves {
-    height:40px;
-    min-height:40px;
-  }
-  .content {
-    height:30vh;
-  }
-}
-</style>
-</head>
-<body>
-<div style="width:100%;height:100%">
-
-<!--Hey! This is the original version
-of Simple CSS Waves-->
-
-<div class="header">
-
-<!--Content before waves-->
-<div class="inner-header flex">
-<!--Just the logo.. Don't mind this-->
-<h1 style="font-size:40px;" id="second">PSGO.TK小改版，今晚8点上线</h1>
-</div>
-
-<!--Waves Container-->
-<div>
-<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-<defs>
-<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-</defs>
-<g class="parallax">
-<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-</g>
-</svg>
-</div>
-<!--Waves end-->
-
-</div>
-<!--Header ends-->
-
-<!--Content starts-->
-<div class="content flex">
-  <p>记得把新地址分享给你的好机友&nbsp ·&nbsp </p><a href="comment/index.html" target="_blank" style="color:#1d9bf0;font-size:18px;text-align:center;text-decoration:none;">&nbsp点击这里给站长留言</a>
-</div>
-<!--Content ends-->
-
-</div>
-
-</body>
+</td></tr>
+   </table> 
+  </div> 
+  <div class="bottopmsg"> 
+   <a href="https://www.psgo.tk/thanks.html" target="_blank" style="text-decoration:none;"><h1 style="font-size:23px;text-align:center;"><font color="#ffffff">你的喜欢与分享 <font color="#CFB53B"> 是我更新的动力</font> </font></h1></a>
+   <a href="https://www.psgo.tk/faqpsgo.html" target="_blank" style="color:#CFB53B;font-size:16px;text-align:center;text-decoration:none;">常见问题</a> &nbsp;·&nbsp; 
+   <a href="https://game.psgo.tk/index.html" target="_blank" style="color:#CFB53B;font-size:16px;text-align:center;text-decoration:none;">资源导航</a> &nbsp;·&nbsp; 
+   <a href="https://www.psgo.tk/base64.html" target="_blank" style="color:#CFB53B;font-size:16px;text-align:center;text-decoration:none;"> 解密神器 </a> &nbsp;·&nbsp; 
+   <a href="https://www.psgo.tk/disclaimer.html" target="_blank" style="color:#CFB53B;font-size:16px;text-align:center;text-decoration:none;">免责声明</a>
+  </div> 
+  <div class="tiles"> 
+   <div class="tiles__line"> 
+    <div class="tiles__line-img tiles__line-img--large"></div> 
+    <div class="tiles__line-img"></div> 
+    <div class="tiles__line-img"></div> 
+    <div class="tiles__line-img tiles__line-img--large"></div> 
+    <div class="tiles__line-img"></div> 
+    <div class="tiles__line-img"></div> 
+   </div> 
+   <div class="tiles__line"> 
+    <div class="tiles__line-img"></div> 
+    <div class="tiles__line-img"></div> 
+    <div class="tiles__line-img tiles__line-img--large"></div> 
+    <div class="tiles__line-img"></div> 
+    <div class="tiles__line-img"></div> 
+    <div class="tiles__line-img tiles__line-img--large"></div> 
+   </div> 
+   <div class="tiles__line"> 
+    <div class="tiles__line-img"></div> 
+    <div class="tiles__line-img tiles__line-img--large"></div> 
+    <div class="tiles__line-img"></div> 
+    <div class="tiles__line-img"></div> 
+    <div class="tiles__line-img tiles__line-img--large"></div> 
+    <div class="tiles__line-img"></div> 
+   </div> 
+   <div class="tiles__line"> 
+    <div class="tiles__line-img"></div> 
+    <div class="tiles__line-img tiles__line-img--large"></div> 
+    <div class="tiles__line-img"></div> 
+    <div class="tiles__line-img"></div> 
+    <div class="tiles__line-img tiles__line-img--large"></div> 
+    <div class="tiles__line-img"></div> 
+   </div>  
+  </div>
+ </body>
 </html>
